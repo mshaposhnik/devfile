@@ -11,7 +11,7 @@ components:
     reference: mongo-db.yaml
     volumes:
       - name: mongo-persistent-storage
-        containerPath: /data/db
+        containerPath: /data/db/dbb
   - alias: nodejs-app
     type: openshift
     reference: nodejs-app.yaml
