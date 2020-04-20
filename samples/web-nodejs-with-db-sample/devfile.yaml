@@ -10,8 +10,8 @@ components:
   - type: kubernetes
     reference: mongo-db.yaml
     volumes:
-      - name: mongo-persistent-storage
-        containerPath: /data/db/dbb
+      - name: foo
+        containerPath: /data/foo/bar
   - alias: nodejs-app
     type: openshift
     reference: nodejs-app.yaml
