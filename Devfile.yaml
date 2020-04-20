@@ -31,6 +31,9 @@ components:
   - alias: mysql
     type: kubernetes
     reference: petclinic.yaml
+    volumes:
+      - name: maven-repo
+        containerPath: /root/.m2
     selector:
       app.kubernetes.io/name: mysql
       app.kubernetes.io/component: database
@@ -41,6 +44,9 @@ components:
   - alias: jdt.ls
     type: chePlugin
     id: eclipse/theia-jdtls:0.0.3
+    volumes:
+      - name: maven-repo
+        containerPath: /root/.m2
 commands:
   - name: build
     actions:
