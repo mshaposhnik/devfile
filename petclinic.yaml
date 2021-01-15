@@ -35,7 +35,10 @@ items:
       - name: MYSQL_USER
         value: petclinic
       - name: MYSQL_PASSWORD
-        value: petclinic
+        valueFrom: 
+          secretKeyRef:
+            key: database-password
+            name: postgresql-customers
       - name: MYSQL_ROOT_PASSWORD
         value: petclinic
       - name: MYSQL_DATABASE
