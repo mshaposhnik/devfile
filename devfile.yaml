@@ -27,13 +27,3 @@ components:
         value: xterm
     mountSources: true
     memoryLimit: 500M
-  - alias: mysql
-    type: kubernetes
-    reference: petclinic.yaml
-    volumes:
-      - name: maven-repo
-        containerPath: /root/.m2
-    selector:
-      app.kubernetes.io/name: mysql
-      app.kubernetes.io/component: database
-      app.kubernetes.io/part-of: petclinic
